@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FasalSetu AI — Intelligent Recovery Decision System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════ LANDING / HERO ══════════════ -->
+<div id="page-landing" class="page active">
+  <nav class="navbar glass">
+    <div class="nav-brand">
+      <div class="brand-icon">🌾</div>
+      <div>
+        <span class="brand-name">FasalSetu AI</span>
+        <span class="brand-tag">by Team AgriSetu · DTU</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#" onclick="showPage('page-dashboard')">Dashboard</a>
+      <a href="#" onclick="showPage('page-register')">Register Batch</a>
+      <a href="#" onclick="showPage('page-analytics')">Analytics</a>
+      <button class="btn btn-primary" onclick="showPage('page-register')">Get Started →</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">🏆 SEVA FIRST 2026 · NAT-004-OP</div>
+      <h1 class="hero-title">From Produce Loss to<br/><span class="gradient-text">Intelligent Recovery</span></h1>
+      <p class="hero-sub">An AI-assisted decision system for smarter produce prioritization, coordinated recovery and responsible post-harvest management at India's mandis.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-xl" onclick="showPage('page-dashboard')">Open Dashboard →</button>
+        <button class="btn btn-outline btn-xl" onclick="showPage('page-register')">Register a Batch</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-pill"><span class="stat-num">11.97M</span><span class="stat-lbl">Tonnes Lost / Year</span></div>
+        <div class="stat-pill"><span class="stat-num">₹27,459Cr</span><span class="stat-lbl">Monetary Loss</span></div>
+        <div class="stat-pill"><span class="stat-num">11.61%</span><span class="stat-lbl">Tomato Loss Rate</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="dashboard-preview glass">
+        <div class="dp-header">
+          <div class="dp-dot red"></div><div class="dp-dot amber"></div><div class="dp-dot green"></div>
+          <span class="dp-title">FasalSetu AI · Live Dashboard</span>
+        </div>
+        <div class="dp-body">
+          <div class="dp-row">
+            <div class="dp-mini-card urgent"><div class="dc-label">⚡ Urgent</div><div class="dc-num">3</div></div>
+            <div class="dp-mini-card ok"><div class="dc-label">✅ Processed</div><div class="dc-num">14</div></div>
+            <div class="dp-mini-card info"><div class="dc-label">📦 Pending</div><div class="dc-num">7</div></div>
+          </div>
+          <div class="dp-batch-row">
+            <div class="dp-batch-item">
+              <span class="batch-id">TOM-104</span>
+              <div class="batch-bar"><div class="batch-fill f-high"></div></div>
+              <span class="batch-status priority">Early Action</span>
+            </div>
+            <div class="dp-batch-item">
+              <span class="batch-id">TOM-107</span>
+              <div class="batch-bar"><div class="batch-fill f-med"></div></div>
+              <span class="batch-status monitor">Monitor</span>
+            </div>
+            <div class="dp-batch-item">
+              <span class="batch-id">TOM-112</span>
+              <div class="batch-bar"><div class="batch-fill f-low"></div></div>
+              <span class="batch-status ok">Stable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="section-problems">
+    <div class="container">
+      <div class="section-label">THE CHALLENGE</div>
+      <h2>India's Produce Loss is a <span class="text-green">Decision-Making Problem</span></h2>
+      <p class="section-sub">Post-harvest deterioration, inconsistent quality assessment and fragmented recovery pathways reduce agricultural produce value.</p>
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-icon">🔍</div>
+          <h3>Quality Uncertainty</h3>
+          <p>Mixed-quality batches require inspection. Visual defects are not always assessed consistently.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏱️</div>
+          <h3>Time-Sensitive Losses</h3>
+          <p>Delayed handling reduces recovery opportunities. Perishable batches require faster decisions.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🔗</div>
+          <h3>Fragmented Recovery</h3>
+          <p>Lower-grade batches may lack viable buyers. Small quantities face unfavorable transport economics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section-flow">
+    <div class="container">
+      <div class="section-label">THE SOLUTION</div>
+      <h2>Six Steps from Arrival to <span class="text-green">Verified Recovery</span></h2>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="step-num">01</div>
+          <div class="step-icon">🚛</div>
+          <div class="step-title">Receive</div>
+          <div class="step-desc">Tomato batches arrive at the mandi</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="step-num">02</div>
+          <div class="step-icon">📝</div>
+          <div class="step-title">Register</div>
+          <div class="step-desc">Operator records batch quantity and details</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="step-num">03</div>
+          <div class="step-icon">👁️</div>
+          <div class="step-title">Review</div>
+          <div class="step-desc">Visible condition is assessed & confirmed</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="step-num">04</div>
+          <div class="step-icon">⚡</div>
+          <div class="step-title">Prioritize</div>
+          <div class="step-desc">System identifies batches needing earlier action</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="step-num">05</div>
+          <div class="step-icon">🎯</div>
+          <div class="step-title">Optimize</div>
+          <div class="step-desc">Recovery options compared using capacity & costs</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="step-num">06</div>
+          <div class="step-icon">✅</div>
+          <div class="step-title">Record</div>
+          <div class="step-desc">Final destination, quantity & outcome logged</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">🌾 FasalSetu AI</div>
+    <div class="footer-info">Team AgriSetu · Delhi Technological University · SEVA FIRST 2026</div>
+    <div class="footer-sdgs">
+      <span class="sdg-badge sdg12">SDG 12</span>
+      <span class="sdg-badge sdg2">SDG 2</span>
+      <span class="sdg-badge sdg13">SDG 13</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════ DASHBOARD ══════════════ -->
+<div id="page-dashboard" class="page">
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🌾</div>
+        <div>
+          <div class="sidebar-brand-name">FasalSetu AI</div>
+          <div class="sidebar-brand-sub">Mandi Dashboard</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="snav-item active" onclick="showPage('page-dashboard')">
+          <span class="snav-icon">📊</span> Dashboard
+        </a>
+        <a class="snav-item" onclick="showPage('page-register')">
+          <span class="snav-icon">➕</span> Register Batch
+        </a>
+        <a class="snav-item" onclick="showPage('page-review')">
+          <span class="snav-icon">🔍</span> Quality Review
+        </a>
+        <a class="snav-item" onclick="showPage('page-priority')">
+          <span class="snav-icon">⚡</span> Priority Engine
+        </a>
+        <a class="snav-item" onclick="showPage('page-recovery')">
+          <span class="snav-icon">🎯</span> Recovery Optimizer
+        </a>
+        <a class="snav-item" onclick="showPage('page-analytics')">
+          <span class="snav-icon">📈</span> Analytics
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn btn-outline w-full" onclick="showPage('page-landing')">← Back to Home</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Batch Dashboard</h1>
+          <p class="page-sub">Azadpur Mandi, New Delhi · <span id="live-time" class="live-badge">Live</span></p>
+        </div>
+        <div class="topbar-actions">
+          <div class="alert-chip urgent">⚡ 3 Urgent Batches</div>
+          <button class="btn btn-primary" onclick="showPage('page-register')">+ Register Batch</button>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-urgent">
+          <div class="kpi-icon">⚡</div>
+          <div class="kpi-info">
+            <div class="kpi-num">3</div>
+            <div class="kpi-lbl">Urgent Batches</div>
+          </div>
+          <div class="kpi-trend up">▲ Action Needed</div>
+        </div>
+        <div class="kpi-card kpi-processed">
+          <div class="kpi-icon">✅</div>
+          <div class="kpi-info">
+            <div class="kpi-num">14</div>
+            <div class="kpi-lbl">Processed Today</div>
+          </div>
+          <div class="kpi-trend good">+2 from yesterday</div>
+        </div>
+        <div class="kpi-card kpi-pending">
+          <div class="kpi-icon">📦</div>
+          <div class="kpi-info">
+            <div class="kpi-num">7</div>
+            <div class="kpi-lbl">Awaiting Review</div>
+          </div>
+          <div class="kpi-trend neutral">Stable</div>
+        </div>
+        <div class="kpi-card kpi-value">
+          <div class="kpi-icon">💰</div>
+          <div class="kpi-info">
+            <div class="kpi-num">₹4,280</div>
+            <div class="kpi-lbl">Value Recovered</div>
+          </div>
+          <div class="kpi-trend good">Today</div>
+        </div>
+      </div>
+
+      <!-- Batch Table -->
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Active Batches</h2>
+          <div class="filter-row">
+            <button class="filter-btn active" onclick="filterBatches('all', this)">All</button>
+            <button class="filter-btn" onclick="filterBatches('urgent', this)">Urgent</button>
+            <button class="filter-btn" onclick="filterBatches('pending', this)">Pending</button>
+            <button class="filter-btn" onclick="filterBatches('processed', this)">Processed</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="batch-table">
+            <thead>
+              <tr>
+                <th>Batch ID</th>
+                <th>Crop</th>
+                <th>Qty (kg)</th>
+                <th>Harvest Age</th>
+                <th>Condition</th>
+                <th>Priority</th>
+                <th>Eligible Options</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="batch-tbody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="bottom-row">
+        <div class="card recovery-sim">
+          <div class="card-header">
+            <h2 class="card-title">Recovery Economics Simulator</h2>
+          </div>
+          <div class="sim-body">
+            <div class="sim-col">
+              <label class="sim-label">Batch Size (kg)</label>
+              <input type="range" min="10" max="500" value="40" id="sim-qty" oninput="updateSim()" class="slider" />
+              <span class="sim-val" id="sim-qty-val">40 kg</span>
+            </div>
+            <div class="sim-col">
+              <label class="sim-label">Recovery Type</label>
+              <select id="sim-type" onchange="updateSim()" class="select-input">
+                <option value="separate">Separate Pickups</option>
+                <option value="coordinated">Coordinated Recovery</option>
+              </select>
+            </div>
+            <div class="sim-result">
+              <div class="sim-result-row">
+                <span>Separate-Pickup Net</span>
+                <span class="sim-amt negative" id="sim-separate">₹82.50</span>
+              </div>
+              <div class="sim-result-row">
+                <span>Coordinated Net</span>
+                <span class="sim-amt positive" id="sim-coordinated">₹282.50</span>
+              </div>
+              <div class="sim-result-row improvement">
+                <span>Modeled Improvement</span>
+                <span class="sim-amt highlight" id="sim-improvement">+₹200</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card recent-outcomes">
+          <div class="card-header">
+            <h2 class="card-title">Recent Outcomes</h2>
+          </div>
+          <div class="outcome-list">
+            <div class="outcome-item">
+              <div class="outcome-icon success">✅</div>
+              <div class="outcome-info">
+                <div class="outcome-id">TOM-098 · 60 kg</div>
+                <div class="outcome-dest">→ Juice Processing Unit, Rohini</div>
+              </div>
+              <div class="outcome-value">₹480</div>
+            </div>
+            <div class="outcome-item">
+              <div class="outcome-icon success">✅</div>
+              <div class="outcome-info">
+                <div class="outcome-id">TOM-095 · 35 kg</div>
+                <div class="outcome-dest">→ NGO Food Bank, Karol Bagh</div>
+              </div>
+              <div class="outcome-value">₹0 (Donated)</div>
+            </div>
+            <div class="outcome-item">
+              <div class="outcome-icon success">✅</div>
+              <div class="outcome-info">
+                <div class="outcome-id">TOM-091 · 80 kg</div>
+                <div class="outcome-dest">→ Retail Market, Lajpat Nagar</div>
+              </div>
+              <div class="outcome-value">₹960</div>
+            </div>
+            <div class="outcome-item">
+              <div class="outcome-icon warning">⚠️</div>
+              <div class="outcome-info">
+                <div class="outcome-id">TOM-088 · 25 kg</div>
+                <div class="outcome-dest">→ Composting (Loss)</div>
+              </div>
+              <div class="outcome-value text-red">₹0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ══════════════ REGISTER BATCH ══════════════ -->
+<div id="page-register" class="page">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🌾</div>
+        <div>
+          <div class="sidebar-brand-name">FasalSetu AI</div>
+          <div class="sidebar-brand-sub">Mandi Dashboard</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="snav-item" onclick="showPage('page-dashboard')"><span class="snav-icon">📊</span> Dashboard</a>
+        <a class="snav-item active" onclick="showPage('page-register')"><span class="snav-icon">➕</span> Register Batch</a>
+        <a class="snav-item" onclick="showPage('page-review')"><span class="snav-icon">🔍</span> Quality Review</a>
+        <a class="snav-item" onclick="showPage('page-priority')"><span class="snav-icon">⚡</span> Priority Engine</a>
+        <a class="snav-item" onclick="showPage('page-recovery')"><span class="snav-icon">🎯</span> Recovery Optimizer</a>
+        <a class="snav-item" onclick="showPage('page-analytics')"><span class="snav-icon">📈</span> Analytics</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn btn-outline w-full" onclick="showPage('page-landing')">← Back to Home</button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Register New Batch</h1>
+          <p class="page-sub">Step 1 of 4 — Batch Entry</p>
+        </div>
+      </div>
+      <div class="form-layout">
+        <div class="card form-card">
+          <div class="progress-steps">
+            <div class="pstep active">1<span>Register</span></div>
+            <div class="pstep-line"></div>
+            <div class="pstep">2<span>Review</span></div>
+            <div class="pstep-line"></div>
+            <div class="pstep">3<span>Prioritize</span></div>
+            <div class="pstep-line"></div>
+            <div class="pstep">4<span>Recover</span></div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Batch ID <span class="required">*</span></label>
+              <div class="input-with-btn">
+                <input type="text" id="f-batch-id" class="form-input" placeholder="e.g. TOM-115" value="TOM-115" />
+                <button class="btn btn-sm btn-outline" onclick="genBatchId()">Auto-generate</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Crop Type <span class="required">*</span></label>
+              <select id="f-crop" class="form-input">
+                <option value="tomato">🍅 Tomatoes</option>
+                <option value="onion">🧅 Onions</option>
+                <option value="potato">🥔 Potatoes</option>
+                <option value="spinach">🥬 Leafy Greens</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Quantity (kg) <span class="required">*</span></label>
+              <input type="number" id="f-qty" class="form-input" placeholder="e.g. 40" min="1" value="40" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Harvest Age (days) <span class="required">*</span></label>
+              <input type="number" id="f-age" class="form-input" placeholder="e.g. 3" min="0" value="3" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Storage Condition</label>
+              <select id="f-storage" class="form-input">
+                <option value="ambient">Ambient / Open Air</option>
+                <option value="cool">Cool Storage</option>
+                <option value="cold">Cold Chain</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Arrival Time</label>
+              <input type="datetime-local" id="f-arrival" class="form-input" />
+            </div>
+            <div class="form-group span-2">
+              <label class="form-label">Operator Notes</label>
+              <textarea id="f-notes" class="form-input" rows="3" placeholder="Any additional observations about the batch..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-outline" onclick="showPage('page-dashboard')">Cancel</button>
+            <button class="btn btn-primary btn-lg" onclick="submitBatch()">Save & Continue to Review →</button>
+          </div>
+        </div>
+
+        <div class="form-sidebar">
+          <div class="card tip-card">
+            <div class="tip-icon">💡</div>
+            <h3>Registration Tips</h3>
+            <ul class="tip-list">
+              <li>Weigh batches before registration for accurate records</li>
+              <li>Record harvest age accurately — this drives urgency scoring</li>
+              <li>Separate mixed-quality lots into distinct batches</li>
+              <li>Note any visible damage before proceeding to Review</li>
+            </ul>
+          </div>
+          <div class="card stats-card">
+            <h3>Today's Intake</h3>
+            <div class="today-stats">
+              <div class="ts-row"><span>Batches Registered</span><strong>18</strong></div>
+              <div class="ts-row"><span>Total Quantity</span><strong>1,240 kg</strong></div>
+              <div class="ts-row"><span>Avg. Harvest Age</span><strong>2.8 days</strong></div>
+              <div class="ts-row"><span>Avg. Batch Size</span><strong>68.9 kg</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ══════════════ QUALITY REVIEW ══════════════ -->
+<div id="page-review" class="page">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🌾</div>
+        <div>
+          <div class="sidebar-brand-name">FasalSetu AI</div>
+          <div class="sidebar-brand-sub">Mandi Dashboard</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="snav-item" onclick="showPage('page-dashboard')"><span class="snav-icon">📊</span> Dashboard</a>
+        <a class="snav-item" onclick="showPage('page-register')"><span class="snav-icon">➕</span> Register Batch</a>
+        <a class="snav-item active" onclick="showPage('page-review')"><span class="snav-icon">🔍</span> Quality Review</a>
+        <a class="snav-item" onclick="showPage('page-priority')"><span class="snav-icon">⚡</span> Priority Engine</a>
+        <a class="snav-item" onclick="showPage('page-recovery')"><span class="snav-icon">🎯</span> Recovery Optimizer</a>
+        <a class="snav-item" onclick="showPage('page-analytics')"><span class="snav-icon">📈</span> Analytics</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn btn-outline w-full" onclick="showPage('page-landing')">← Back to Home</button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Quality Review — TOM-115</h1>
+          <p class="page-sub">Step 2 of 4 — Human-verified visual assessment</p>
+        </div>
+        <div class="batch-chip">📦 40 kg · Tomatoes · Day 3</div>
+      </div>
+
+      <div class="progress-steps horiz mb-4">
+        <div class="pstep done">1<span>Register</span></div>
+        <div class="pstep-line done"></div>
+        <div class="pstep active">2<span>Review</span></div>
+        <div class="pstep-line"></div>
+        <div class="pstep">3<span>Prioritize</span></div>
+        <div class="pstep-line"></div>
+        <div class="pstep">4<span>Recover</span></div>
+      </div>
+
+      <div class="review-layout">
+        <div class="card review-main">
+          <h2 class="card-title">Visual Condition Assessment</h2>
+          <p class="card-sub">Select the category that best describes this batch after physical inspection.</p>
+
+          <div class="condition-grid">
+            <div class="condition-card" id="cond-A" onclick="selectCondition('A')">
+              <div class="cond-icon">🟢</div>
+              <div class="cond-label">Grade A — Excellent</div>
+              <div class="cond-desc">Firm, uniform color, no visible damage. Retail / export ready.</div>
+              <div class="cond-urgency low">Low Urgency</div>
+            </div>
+            <div class="condition-card selected" id="cond-B" onclick="selectCondition('B')">
+              <div class="cond-icon">🟡</div>
+              <div class="cond-label">Grade B — Good</div>
+              <div class="cond-desc">Minor surface blemishes, some color variation. Suitable for processing or secondary market.</div>
+              <div class="cond-urgency medium">Medium Urgency</div>
+            </div>
+            <div class="condition-card" id="cond-C" onclick="selectCondition('C')">
+              <div class="cond-icon">🟠</div>
+              <div class="cond-label">Grade C — Fair</div>
+              <div class="cond-desc">Visible softening, bruising or over-ripening. Requires early processing. Juice / ketchup grade.</div>
+              <div class="cond-urgency high">High Urgency</div>
+            </div>
+            <div class="condition-card" id="cond-D" onclick="selectCondition('D')">
+              <div class="cond-icon">🔴</div>
+              <div class="cond-label">Grade D — Poor</div>
+              <div class="cond-desc">Extensive decay, mold or severe damage. Composting or biogas — not for food channels.</div>
+              <div class="cond-urgency critical">Critical</div>
+            </div>
+          </div>
+
+          <div class="condition-checklist">
+            <h3>Defect Checklist</h3>
+            <div class="checklist-grid">
+              <label class="check-item"><input type="checkbox" /> Surface cracks or splits</label>
+              <label class="check-item"><input type="checkbox" checked /> Minor surface bruising</label>
+              <label class="check-item"><input type="checkbox" /> Mold or fungal growth</label>
+              <label class="check-item"><input type="checkbox" /> Over-ripening (soft)</label>
+              <label class="check-item"><input type="checkbox" /> Pest damage visible</label>
+              <label class="check-item"><input type="checkbox" checked /> Color non-uniformity</label>
+            </div>
+          </div>
+
+          <div class="reviewer-sign">
+            <div class="form-group">
+              <label class="form-label">Reviewed by (Operator Name)</label>
+              <input type="text" class="form-input" placeholder="Enter your name" value="Ramesh Kumar" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Review Notes</label>
+              <textarea class="form-input" rows="2" placeholder="Additional observations...">Batch appears fresh, minor color variation observed in ~20% of produce. Recommended for secondary market.</textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-outline" onclick="showPage('page-register')">← Back</button>
+            <button class="btn btn-primary btn-lg" onclick="showPage('page-priority')">Confirm & Continue to Priority →</button>
+          </div>
+        </div>
+
+        <div class="review-sidebar">
+          <div class="card ai-assist-card">
+            <div class="ai-badge">🤖 AI Assist (Prototype)</div>
+            <h3>AI Classification</h3>
+            <p class="ai-note">AI-assisted image classification is planned for the next development phase. Currently using human-verified visual assessment.</p>
+            <div class="ai-preview">
+              <div class="ai-tomato-vis">🍅🍅🍅🍅🍅<br/>🍅🟡🍅🍅🍅<br/>🍅🍅🍅🍅🍅</div>
+              <div class="ai-prediction">
+                <div class="ai-pred-row"><span>Grade A</span><div class="ai-bar"><div style="width:15%" class="ab-fill ab-a"></div></div><span>15%</span></div>
+                <div class="ai-pred-row"><span>Grade B</span><div class="ai-bar"><div style="width:68%" class="ab-fill ab-b"></div></div><span>68%</span></div>
+                <div class="ai-pred-row"><span>Grade C</span><div class="ai-bar"><div style="width:17%" class="ab-fill ab-c"></div></div><span>17%</span></div>
+              </div>
+            </div>
+            <div class="ai-disclaimer">⚠️ AI suggestion requires human verification before use</div>
+          </div>
+          <div class="card safety-card">
+            <div class="safety-icon">🛡️</div>
+            <h3>Safety Requirements</h3>
+            <p>Human review and destination eligibility are required before any food-channel routing decision.</p>
+            <div class="safety-checks">
+              <div class="sc-row done">✅ Operator review completed</div>
+              <div class="sc-row pending">⏳ Destination eligibility check</div>
+              <div class="sc-row pending">⏳ Recovery partner confirmation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ══════════════ PRIORITY ENGINE ══════════════ -->
+<div id="page-priority" class="page">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🌾</div>
+        <div>
+          <div class="sidebar-brand-name">FasalSetu AI</div>
+          <div class="sidebar-brand-sub">Mandi Dashboard</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="snav-item" onclick="showPage('page-dashboard')"><span class="snav-icon">📊</span> Dashboard</a>
+        <a class="snav-item" onclick="showPage('page-register')"><span class="snav-icon">➕</span> Register Batch</a>
+        <a class="snav-item" onclick="showPage('page-review')"><span class="snav-icon">🔍</span> Quality Review</a>
+        <a class="snav-item active" onclick="showPage('page-priority')"><span class="snav-icon">⚡</span> Priority Engine</a>
+        <a class="snav-item" onclick="showPage('page-recovery')"><span class="snav-icon">🎯</span> Recovery Optimizer</a>
+        <a class="snav-item" onclick="showPage('page-analytics')"><span class="snav-icon">📈</span> Analytics</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn btn-outline w-full" onclick="showPage('page-landing')">← Back to Home</button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Priority Engine</h1>
+          <p class="page-sub">Step 3 of 4 — Rank batches for appropriate action</p>
+        </div>
+      </div>
+
+      <div class="progress-steps horiz mb-4">
+        <div class="pstep done">1<span>Register</span></div>
+        <div class="pstep-line done"></div>
+        <div class="pstep done">2<span>Review</span></div>
+        <div class="pstep-line done"></div>
+        <div class="pstep active">3<span>Prioritize</span></div>
+        <div class="pstep-line"></div>
+        <div class="pstep">4<span>Recover</span></div>
+      </div>
+
+      <div class="priority-layout">
+        <div class="priority-queue card">
+          <div class="card-header">
+            <h2 class="card-title">⚡ Priority Queue</h2>
+            <div class="ai-chip">Rule-Based Engine</div>
+          </div>
+          <div class="pq-list" id="priority-list">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="priority-rules card">
+          <div class="card-header">
+            <h2 class="card-title">Decision Rules (Transparent)</h2>
+          </div>
+          <div class="rules-list">
+            <div class="rule-item">
+              <div class="rule-icon">📅</div>
+              <div class="rule-text">
+                <strong>Harvest Age</strong>
+                <p>Batches ≥4 days old get +30 urgency points. Tomatoes deteriorate faster in ambient conditions.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <div class="rule-icon">🔍</div>
+              <div class="rule-text">
+                <strong>Visual Grade</strong>
+                <p>Grade C/D batches get +40 urgency points. Grade B gets +20. Grade A is baseline.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <div class="rule-icon">🌡️</div>
+              <div class="rule-text">
+                <strong>Storage Condition</strong>
+                <p>Ambient storage adds +15 urgency points vs cool/cold chain storage.</p>
+              </div>
+            </div>
+            <div class="rule-item">
+              <div class="rule-icon">📦</div>
+              <div class="rule-text">
+                <strong>Batch Size</strong>
+                <p>Small batches (&lt;20 kg) get a flag for coordinated pickup to improve economics.</p>
+              </div>
+            </div>
+            <div class="rule-item rule-safety">
+              <div class="rule-icon">🛡️</div>
+              <div class="rule-text">
+                <strong>Safety Flag</strong>
+                <p>Grade D batches are automatically routed to composting/biogas — never food channels.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions mt-3">
+            <button class="btn btn-outline" onclick="showPage('page-review')">← Back</button>
+            <button class="btn btn-primary btn-lg" onclick="showPage('page-recovery')">Proceed to Recovery Optimizer →</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ══════════════ RECOVERY OPTIMIZER ══════════════ -->
+<div id="page-recovery" class="page">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🌾</div>
+        <div>
+          <div class="sidebar-brand-name">FasalSetu AI</div>
+          <div class="sidebar-brand-sub">Mandi Dashboard</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="snav-item" onclick="showPage('page-dashboard')"><span class="snav-icon">📊</span> Dashboard</a>
+        <a class="snav-item" onclick="showPage('page-register')"><span class="snav-icon">➕</span> Register Batch</a>
+        <a class="snav-item" onclick="showPage('page-review')"><span class="snav-icon">🔍</span> Quality Review</a>
+        <a class="snav-item" onclick="showPage('page-priority')"><span class="snav-icon">⚡</span> Priority Engine</a>
+        <a class="snav-item active" onclick="showPage('page-recovery')"><span class="snav-icon">🎯</span> Recovery Optimizer</a>
+        <a class="snav-item" onclick="showPage('page-analytics')"><span class="snav-icon">📈</span> Analytics</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn btn-outline w-full" onclick="showPage('page-landing')">← Back to Home</button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Recovery Optimizer — TOM-115</h1>
+          <p class="page-sub">Step 4 of 4 — Compare eligible recovery destinations</p>
+        </div>
+        <div class="batch-chip urgent">⚡ Early Action Required</div>
+      </div>
+
+      <div class="progress-steps horiz mb-4">
+        <div class="pstep done">1<span>Register</span></div>
+        <div class="pstep-line done"></div>
+        <div class="pstep done">2<span>Review</span></div>
+        <div class="pstep-line done"></div>
+        <div class="pstep done">3<span>Prioritize</span></div>
+        <div class="pstep-line done"></div>
+        <div class="pstep active">4<span>Recover</span></div>
+      </div>
+
+      <!-- Batch Summary -->
+      <div class="batch-summary-card card mb-4">
+        <div class="bs-info">
+          <div class="bs-row"><span class="bs-lbl">Batch ID</span><span class="bs-val">TOM-115</span></div>
+          <div class="bs-row"><span class="bs-lbl">Crop</span><span class="bs-val">🍅 Tomatoes</span></div>
+          <div class="bs-row"><span class="bs-lbl">Quantity</span><span class="bs-val">40 kg</span></div>
+          <div class="bs-row"><span class="bs-lbl">Condition</span><span class="bs-val grade-b">Grade B — Good</span></div>
+          <div class="bs-row"><span class="bs-lbl">Priority</span><span class="bs-val priority-chip">Early Action</span></div>
+          <div class="bs-row"><span class="bs-lbl">Eligible Options</span><span class="bs-val">2 destinations</span></div>
+        </div>
+        <div class="bs-visual">
+          <div class="urgency-meter">
+            <div class="um-label">Urgency Score</div>
+            <div class="um-track">
+              <div class="um-fill" style="width: 68%"></div>
+            </div>
+            <div class="um-score">68 / 100</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recovery Options -->
+      <h2 class="section-title mb-2">Compare Available Recovery Options</h2>
+      <div class="recovery-options-grid" id="recovery-options">
+        <!-- Cards populated below -->
+      </div>
+
+      <!-- Decision Panel -->
+      <div class="decision-panel card mt-4" id="decision-panel" style="display:none">
+        <div class="dp-icon">✅</div>
+        <div class="dp-info">
+          <h3>Recommended: <span id="dp-dest-name"></span></h3>
+          <p id="dp-reason"></p>
+        </div>
+        <div class="dp-actions">
+          <button class="btn btn-primary btn-lg" onclick="confirmRecovery()">Confirm & Record Outcome →</button>
+        </div>
+      </div>
+
+      <div class="form-actions mt-3" id="recovery-nav">
+        <button class="btn btn-outline" onclick="showPage('page-priority')">← Back</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ══════════════ ANALYTICS ══════════════ -->
+<div id="page-analytics" class="page">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🌾</div>
+        <div>
+          <div class="sidebar-brand-name">FasalSetu AI</div>
+          <div class="sidebar-brand-sub">Mandi Dashboard</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="snav-item" onclick="showPage('page-dashboard')"><span class="snav-icon">📊</span> Dashboard</a>
+        <a class="snav-item" onclick="showPage('page-register')"><span class="snav-icon">➕</span> Register Batch</a>
+        <a class="snav-item" onclick="showPage('page-review')"><span class="snav-icon">🔍</span> Quality Review</a>
+        <a class="snav-item" onclick="showPage('page-priority')"><span class="snav-icon">⚡</span> Priority Engine</a>
+        <a class="snav-item" onclick="showPage('page-recovery')"><span class="snav-icon">🎯</span> Recovery Optimizer</a>
+        <a class="snav-item active" onclick="showPage('page-analytics')"><span class="snav-icon">📈</span> Analytics</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn btn-outline w-full" onclick="showPage('page-landing')">← Back to Home</button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Analytics & Outcomes</h1>
+          <p class="page-sub">Outcome Tracker — Recovered kilograms · Net value · Disposal records</p>
+        </div>
+        <div class="topbar-actions">
+          <select class="select-input" style="width:auto">
+            <option>Last 7 Days</option>
+            <option>Last 30 Days</option>
+            <option>This Season</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Summary KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-green">
+          <div class="kpi-icon">♻️</div>
+          <div class="kpi-info">
+            <div class="kpi-num">342 kg</div>
+            <div class="kpi-lbl">Produce Recovered</div>
+          </div>
+          <div class="kpi-trend good">+18% vs last week</div>
+        </div>
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-icon">💰</div>
+          <div class="kpi-info">
+            <div class="kpi-num">₹18,450</div>
+            <div class="kpi-lbl">Net Value Recovered</div>
+          </div>
+          <div class="kpi-trend good">+₹2,800 vs last week</div>
+        </div>
+        <div class="kpi-card kpi-orange">
+          <div class="kpi-icon">🗑️</div>
+          <div class="kpi-info">
+            <div class="kpi-num">28 kg</div>
+            <div class="kpi-lbl">Composted / Biogas</div>
+          </div>
+          <div class="kpi-trend good">-12% vs last week</div>
+        </div>
+        <div class="kpi-card kpi-teal">
+          <div class="kpi-icon">📊</div>
+          <div class="kpi-info">
+            <div class="kpi-num">92.4%</div>
+            <div class="kpi-lbl">Recovery Rate</div>
+          </div>
+          <div class="kpi-trend good">↑ Improving</div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="charts-row mt-4">
+        <div class="card chart-card">
+          <h2 class="card-title">Recovery by Destination (This Week)</h2>
+          <div class="bar-chart" id="dest-chart">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <div class="card chart-card">
+          <h2 class="card-title">Grade Distribution</h2>
+          <div class="donut-chart-wrap">
+            <div class="donut-chart">
+              <svg viewBox="0 0 120 120" class="donut-svg">
+                <circle cx="60" cy="60" r="45" fill="none" stroke="#e8f5e9" stroke-width="20"/>
+                <circle cx="60" cy="60" r="45" fill="none" stroke="#2e7d32" stroke-width="20"
+                  stroke-dasharray="84.8 197.9" stroke-dashoffset="0" class="donut-seg"/>
+                <circle cx="60" cy="60" r="45" fill="none" stroke="#66bb6a" stroke-width="20"
+                  stroke-dasharray="56.5 226.2" stroke-dashoffset="-84.8" class="donut-seg"/>
+                <circle cx="60" cy="60" r="45" fill="none" stroke="#ffa726" stroke-width="20"
+                  stroke-dasharray="42.4 240.3" stroke-dashoffset="-141.3" class="donut-seg"/>
+                <circle cx="60" cy="60" r="45" fill="none" stroke="#ef5350" stroke-width="20"
+                  stroke-dasharray="14.1 268.6" stroke-dashoffset="-183.7" class="donut-seg"/>
+                <text x="60" y="65" text-anchor="middle" class="donut-center-text">Grade</text>
+              </svg>
+            </div>
+            <div class="donut-legend">
+              <div class="dl-item"><div class="dl-dot" style="background:#2e7d32"></div><span>Grade A — 30%</span></div>
+              <div class="dl-item"><div class="dl-dot" style="background:#66bb6a"></div><span>Grade B — 45%</span></div>
+              <div class="dl-item"><div class="dl-dot" style="background:#ffa726"></div><span>Grade C — 20%</span></div>
+              <div class="dl-item"><div class="dl-dot" style="background:#ef5350"></div><span>Grade D — 5%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome Log -->
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Outcome Log</h2>
+          <span class="badge">24 records this week</span>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Batch ID</th>
+                <th>Crop</th>
+                <th>Qty (kg)</th>
+                <th>Grade</th>
+                <th>Destination</th>
+                <th>Net Value</th>
+                <th>Date</th>
+                <th>Outcome</th>
+              </tr>
+            </thead>
+            <tbody id="outcome-tbody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div id="success-modal" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-icon">🎉</div>
+    <h2>Outcome Recorded!</h2>
+    <p>Batch <strong>TOM-115</strong> has been successfully routed and the outcome logged.</p>
+    <div class="modal-details">
+      <div class="md-row"><span>Destination</span><strong id="modal-dest">Juice Processing Unit, Rohini</strong></div>
+      <div class="md-row"><span>Quantity</span><strong>40 kg</strong></div>
+      <div class="md-row"><span>Net Recovery Value</span><strong class="text-green" id="modal-value">₹282.50</strong></div>
+      <div class="md-row"><span>Recorded By</span><strong>Ramesh Kumar</strong></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-outline" onclick="closeModal()">Close</button>
+      <button class="btn btn-primary" onclick="showPage('page-dashboard'); closeModal()">Back to Dashboard</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
