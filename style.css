@@ -463,49 +463,41 @@ body {
    REGISTER PAGE
 ══════════════════════════════════════════ */
 .form-layout { display: grid; grid-template-columns: 1fr 320px; gap: 24px; }
-.form-card { }
+.form-card { overflow: visible; }
 
 .progress-steps {
-  display: flex; align-items: center; margin-bottom: 32px;
+  display: flex; align-items: center;
+  margin-bottom: 48px; /* extra space for the labels below circles */
+  padding-bottom: 8px;
 }
-.progress-steps.horiz { margin-bottom: 0; }
-.pstep {
-  display: flex; flex-direction: column; align-items: center; gap: 4px;
-  font-size: 11px; font-weight: 600; color: var(--text3);
-  position: relative;
-}
-.pstep > span { font-size: 10px; margin-top: 4px; }
-.pstep::before {
-  content: attr(data-num, ''); width: 32px; height: 32px; border-radius: 50%;
-  background: var(--green-100); color: var(--text3);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 13px; font-weight: 700; border: 2px solid var(--green-200);
-}
+.progress-steps.horiz { margin-bottom: 48px; padding-bottom: 8px; }
 
-/* override for data approach */
 .pstep {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: var(--green-100); color: var(--text3);
-  display: flex; flex-direction: row; align-items: center; justify-content: center;
-  font-size: 13px; font-weight: 700; border: 2px solid var(--green-200);
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #d0e8d0;             /* solid muted green — inactive */
+  color: #5a8a5a;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  border: none;                    /* NO border — solid fill only */
   position: relative; flex-shrink: 0;
 }
 .pstep > span {
-  position: absolute; top: 38px; white-space: nowrap;
-  font-size: 10px; font-weight: 600; color: var(--text3);
+  position: absolute; top: 44px; white-space: nowrap;
+  font-size: 11px; font-weight: 600; color: var(--text3);
+  left: 50%; transform: translateX(-50%);
 }
 .pstep.active {
-  background: var(--green-800); color: #fff; border-color: var(--green-800);
+  background: var(--green-800); color: #fff;
 }
-.pstep.active > span { color: var(--green-800); }
+.pstep.active > span { color: var(--green-800); font-weight: 700; }
 .pstep.done {
-  background: var(--green-500); color: #fff; border-color: var(--green-500);
+  background: var(--green-600); color: #fff;
 }
 .pstep.done > span { color: var(--green-700); }
 .pstep-line {
-  flex: 1; height: 2px; background: var(--green-200); margin: 0 4px;
+  flex: 1; height: 2px; background: #d0e8d0; margin: 0 6px; flex-shrink: 1;
 }
-.pstep-line.done { background: var(--green-500); }
+.pstep-line.done { background: var(--green-600); }
 
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .form-group { display: flex; flex-direction: column; }
@@ -631,18 +623,19 @@ textarea.form-input { resize: vertical; }
 .pq-rank.r4 { background: #e8f5e9; color: var(--green-800); }
 .pq-rank.r5 { background: #f5f5f5; color: #666; }
 
-.pq-info { flex: 1; }
+.pq-info { flex: 1; min-width: 0; }
 .pq-id { font-size: 14px; font-weight: 700; }
 .pq-details { font-size: 12px; color: var(--text2); margin-top: 2px; }
-.pq-score-bar { flex: 1; }
+/* Fixed width so every bar track is identical across all rows */
+.pq-score-bar { flex: 0 0 220px; width: 220px; }
 .score-label { font-size: 11px; color: var(--text3); margin-bottom: 4px; }
-.score-track { height: 8px; background: var(--green-100); border-radius: 999px; overflow: hidden; }
+.score-track { height: 8px; background: var(--green-100); border-radius: 999px; overflow: hidden; width: 100%; }
 .score-fill { height: 100%; border-radius: 999px; transition: width 0.6s ease; }
 .score-fill.s-critical { background: var(--danger); }
 .score-fill.s-high     { background: var(--warning); }
 .score-fill.s-medium   { background: var(--amber); }
 .score-fill.s-low      { background: var(--green-500); }
-.pq-action { flex-shrink: 0; }
+.pq-action { flex-shrink: 0; min-width: 110px; text-align: right; }
 
 .ai-chip {
   background: #e8eaf6; color: #5c6bc0;
